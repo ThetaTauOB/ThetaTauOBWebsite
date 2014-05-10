@@ -1,0 +1,32 @@
+[
+	{
+		"img":"img/alumni/JoeEngle.jpg",
+		"name": "Joe Engle",
+		"job_title": "Astronaut"
+	},
+	{
+		"img":"img/alumni/Simon.jpg",
+		"name": "Simon Ramo",
+		"job_title": "Developer of the microwave and ICBM"
+	},
+	{
+		"img":"img/alumni/CharlesLuckman.jpg",
+		"name": "Charles Luckman",
+		"job_title": "President, Levers Brothers"
+	},
+	{
+		"img":"img/alumni/Curtis.jpg",
+		"name": "Curtis LeMay",
+		"job_title": "US Air Force General"
+	},
+	{
+		"img":"img/alumni/PaulEndacott.jpg",
+		"name": "Paul Endacott",
+		"job_title": "Basketball Hall of Fame"
+	},
+	{
+		"img":"img/alumni/Lloyd.jpg",
+		"name": "Lloyd Reuss",
+		"job_title": "President, General Motors"
+	}
+]

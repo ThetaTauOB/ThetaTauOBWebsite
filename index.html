@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="mainApp">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Theta Tau - Professional Engineering Fraternity</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+
+    <!-- Add custom CSS here -->
+    <link href="css/business-casual.css" rel="stylesheet">
+
+    <script src="https://code.angularjs.org/1.2.16/angular.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0rc1/angular-route.js"></script>
+    
+    <script type="text/javascript">
+        var app = angular.module('mainApp', [
+          'ngRoute',
+        ]);
+        app.config(['$routeProvider', function($routeProvider) {
+            $routeProvider.
+              when('/contact', {
+                templateUrl: 'templates/contact.html'//,
+                //controller: 'MainController'
+              }).
+              when('/home', {
+                templateUrl: 'templates/home.html'//,
+                //controller: 'MainController'
+              }).
+              when('/about', {
+                templateUrl: 'templates/about.html',
+                controller: 'AlumniController'
+              }).
+              when('/gallery', {
+                templateUrl: 'templates/gallery.html'//,
+                //controller: 'MainController'
+              }).
+              otherwise({
+                redirectTo: '/home'
+              });
+          }]);
+        app.controller('AlumniController', function($scope, $http) {
+            $http.get('bin/notable_alumni.json').then(function(res){
+                $scope.alumni = res.data;                
+            });
+            $http.get('bin/full_members_list.json').then(function(res){
+                $scope.members = res.data;   
+                $scope.members_count =  Object.keys ? ObjectLength($scope.members.members) : 200          
+            });
+
+        });
+        function ObjectLength( object ) {
+            return Object.keys(object).length;
+        }
+    </script>
+</head>
+
+<body>
+
+    <div class="brand">Theta Tau</div>
+    <div class="address-bar">Professional Engineering Fraternity</div>
+
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#home">Theta Tau</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="#home">Home</a>
+                    </li>
+                    <li><a href="#about">About</a>
+                    </li>
+                    <li><a href="#gallery">Gallery</a>
+                    </li> 
+                    <li><a href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <div class="container" controller="MainController">
+        <div ng-view></div>
+    </div>
+    <!-- /.container -->
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <p>"Whatsoever thy hand findeth to do, do it with thy might" - <strong>Ecclesiastes 9:10</strong></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- JavaScript -->
+    <script src="js/jquery-1.10.2.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/mousetrap/1.4.6/mousetrap.min.js"></script>
+
+    <script>
+        Mousetrap.bind('up up down down left right left right b a enter', function() {
+            $('body').append('<audio src="sound/mortal.mp3" autoplay>Your browser does not support the <code>audio</code> element.</audio>');
+        });
+    </script>
+
+</body>
+
+</html>

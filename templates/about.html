@@ -1,0 +1,44 @@
+<div class="row">
+    <div class="box">
+        <div class="col-lg-12">
+            <hr>
+            <h2 class="intro-text text-center">About <strong>Theta Tau</strong>
+            </h2>
+            <center>
+                <img style="width:110px;" class="img-responsive" src="img/hammerandtongs.png" alt="">
+            </center>
+            <hr>
+        </div>
+        <div class="col-md-6">
+            <img class="img-responsive img-border-left" src="img/slide-4.jpg" alt="">
+            <p class="text-center"><em>Theta Tau</em> <strong>Phi Chapter</strong></p>
+        </div>
+        <div class="col-md-6" ng-controller="AlumniController">
+            <p>Theta Tau is the oldest, largest, and foremost Fraternity for Engineers.  Since its founding at the University of Minnesota in 1904, over 35,000 have been initiated over the years.</p>
+            <p>Our Omicron Beta chapter was founded at the University of Michigan-Dearborn on January 16th, 1988, making it the first professional fraternity on campus and spurring the growth of Greek life at UM-D.</p><p>Since it's foundation, the chapter has initiated over {{members_count}} members and has become a prominent presence on campus. Holding campus positions such as Presidents of the Dearborn Campus Engineers and Association for Computing Engineers, and Treasurer of the Greek Leadership Council, the brothers of Theta Tau prove their versatility academically, socially, and professionally.</p>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+</div>
+
+<div class="row" ng-controller="AlumniController">
+    <div class="box gallery">
+        <div class="col-lg-12">
+            <hr>
+            <h2 class="intro-text text-center">Famous <strong>Alumni</strong>
+            </h2>
+            <center>
+                <img style="width:110px;" class="img-responsive" src="img/hammerandtongs.png" alt="">
+            </center>
+            <hr>
+        </div>
+        <div ng-repeat="alum in alumni" class="col-sm-4 text-center">
+            <img class="img-responsive" ng-src="{{alum.img}}" alt="">
+            <h3>{{alum.name}}
+                <small>{{alum.job_title}}</small>
+            </h3>
+        </div>
+        <div class="col-lg-12 text-center manymore"><p><a target="_blank" href="http://en.wikipedia.org/wiki/Theta_Tau#Notable_alumni">and many more.</a></p></div>
+        <div class="clearfix"></div>
+    </div>
+</div>
