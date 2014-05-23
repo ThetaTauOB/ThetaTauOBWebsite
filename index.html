@@ -36,9 +36,9 @@
                 templateUrl: 'templates/about.html',
                 controller: 'AlumniController'
               }).
-              when('/gallery', {
-                templateUrl: 'templates/gallery.html'//,
-                //controller: 'MainController'
+              when('/members', {
+                templateUrl: 'templates/members.html',
+                controller: 'MembersController'
               }).
               otherwise({
                 redirectTo: '/home'
@@ -50,9 +50,15 @@
             });
             $http.get('bin/full_members_list.json').then(function(res){
                 $scope.members = res.data;   
-                $scope.members_count =  Object.keys ? ObjectLength($scope.members.members) : 200          
+                $scope.members_count =  Object.keys ? ObjectLength($scope.members.members) : 200;        
             });
 
+        });
+        app.controller('MembersController', function($scope, $http) {
+            $http.get('bin/full_members_list.json').then(function(res){
+                $scope.members = res.data.members;   
+                $scope.members_count =  Object.keys ? ObjectLength($scope.members) : 200; 
+            });
         });
         function ObjectLength( object ) {
             return Object.keys(object).length;
@@ -84,7 +90,7 @@
                     </li>
                     <li><a href="#about">About</a>
                     </li>
-                    <li><a href="#gallery">Gallery</a>
+                    <li><a href="#members">Members</a>
                     </li> 
                     <li><a href="#contact">Contact</a>
                     </li>

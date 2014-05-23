@@ -1,0 +1,15 @@
+<div class="row" ng-controller="MembersController">
+    <div class="box">
+        <h3 class="col-sm-12 text-center" style="color:#8B0000;text-transform: none;">We have initiated over {{members_count}} members since 1988.<h3>
+        <center>
+            <img style="width:110px;" class="img-responsive" src="img/hammerandtongs.png" alt="">
+        </center>   
+        <div ng-repeat="member in members" class="col-sm-12 text-center">
+            <h3>{{member.roll}}
+                <small>{{member.name}}</small>
+            </h3>
+        </div>
+
+    </div>
+</div>
+
