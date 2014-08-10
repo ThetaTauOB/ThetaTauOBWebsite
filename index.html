@@ -44,6 +44,9 @@
 			  when('/faq', {
 				templateUrl: 'templates/faq.html'
 			  }).
+			  when('/links', {
+				templateUrl: 'templates/links.html'
+			  }).
               otherwise({
                 redirectTo: '/home'
               });
@@ -100,7 +103,7 @@
                     </li>
 					<li><a href="#faq">FAQ</a>
 					</li>
-                    <li class="dropdown"><a data-toggle="dropdown" class="dropdown-toggle">Links</a>
+                    <li class="dropdown"><a href="#links" data-toggle="dropdown" class="dropdown-toggle disabled">Links</a>
 						<ul class="dropdown-menu" id="menu1">
 							<li class="dropdown-item"><a href="http://facebook.com/umdthetatau">Facebook</a></li>
 							<li class="dropdown-item"><a href="http://instagram.com/umdthetatau">Instagram</a></li>
