@@ -41,6 +41,9 @@
                 templateUrl: 'templates/members.html',
                 controller: 'MembersController'
               }).
+			  when('/faq', {
+				templateUrl: 'templates/faq.html'
+			  }).
               otherwise({
                 redirectTo: '/home'
               });
@@ -95,7 +98,17 @@
                     </li> 
                     <li><a href="#contact">Contact</a>
                     </li>
-                    <li><a href="https://www.facebook.com/umdthetatau">Facebook</a>
+					<li><a href="#faq">FAQ</a>
+					</li>
+                    <li class="dropdown"><a data-toggle="dropdown" class="dropdown-toggle">Links</a>
+						<ul class="dropdown-menu" id="menu1">
+							<li class="dropdown-item"><a href="http://facebook.com/umdthetatau">Facebook</a></li>
+							<li class="dropdown-item"><a href="http://instagram.com/umdthetatau">Instagram</a></li>
+							<li class="dropdown-item"><a href="http://twitter.com/umdthetatau">Twitter</a></li>
+							<li class="dropdown-item"><a href="http://members.umdthetatau.org">Members Area</a></li>
+							<li class="dropdown-item"><a href="http://thetatau.org">National Office</a></li>
+							<li class="dropdown-item"><a href="http://umdearborn.edu">U-M Dearborn</a></li>
+						</ul>
                     </li>
                 </ul>
             </div>
