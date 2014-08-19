@@ -251,3 +251,7 @@ body .container .manymore a{
   margin: 1em;
   display: inline-block;
 }
+.company-img {
+  display: inline;
+  width: 100%;
+}
