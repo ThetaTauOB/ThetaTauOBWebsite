@@ -47,6 +47,9 @@
 			  when('/links', {
 				templateUrl: 'templates/links.html'
 			  }).
+			  when('/calendar', {
+				templateUrl: 'templates/calendar.html'
+			  }).
               otherwise({
                 redirectTo: '/home'
               });
@@ -102,6 +105,8 @@
                     <li><a href="#contact">Contact</a>
                     </li>
 					<li><a href="#faq">FAQ</a>
+					</li>
+					<li><a href="#calendar">Calendar</a>
 					</li>
                     <li class="dropdown"><a href="#links" data-toggle="dropdown" class="dropdown-toggle disabled">Links</a>
 						<ul class="dropdown-menu" id="menu1">
