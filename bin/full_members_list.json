@@ -18,7 +18,7 @@
         },
         {
             "roll": 5,
-            "name": "Peter \"Bat Show\" Haniak"
+            "name": "Peter \"Boat Show\" Haniak"
         },
         {
             "roll": 6,
@@ -895,6 +895,14 @@
         {
             "roll": 226,
             "name": "Jordan \"Gandalf\" Stec"
+        },
+        {
+            "roll": 227,
+            "name": "Jonathan \"Nixon\" Cardasis"
+        },
+        {
+            "roll": 228,
+            "name": "Justin \"Dora\" Hulack"
         },
     ]
 }
